@@ -100,7 +100,7 @@ export function remove (eventSource) {
     })
 }
 
-export function getStripeCheckoutSession (eventSource) {
+export function stripeCheckoutSession (eventSource) {
   let url = `${host}/${version}/${endpoint}/stripeCheckoutSession`
   eventSource.url = url
   return axios
