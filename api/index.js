@@ -15,7 +15,7 @@ import * as pages from './v1/pages.js'
 import * as licenses from './v1/licenses.js'
 import * as plans from './v1/plans.js'
 import * as videos from './v1/videos.js'
-import * as gudies from './v1/guides.js'
+import * as guides from './v1/guides.js'
 
 export let istrav = {
   event: {
@@ -50,6 +50,6 @@ export let istrav = {
   },
   channel: {
     videos,
-    gudies
+    guides
   }
 }
