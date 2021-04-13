@@ -1,6 +1,6 @@
 import * as sources from './v1/sources.js'
-import * as backup from './v1/backup.js'
-import * as logging from './v1/logging.js'
+// import * as backup from './v1/backup.js'
+// import * as logging from './v1/logging.js'
 import * as users from './v1/users.js'
 import * as carts from './v1/carts.js'
 import * as orders from './v1/orders.js'
@@ -20,8 +20,8 @@ import * as guides from './v1/guides.js'
 export let istrav = {
   event: {
     sources,
-    backup,
-    logging
+    // backup,
+    // logging
   },
   tenant: {
     members,
