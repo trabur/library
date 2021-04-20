@@ -50,6 +50,7 @@ export let istrav = {
   },
   channel: {
     videos,
-    guides
+    guides,
+    playlists
   }
 }
