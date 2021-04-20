@@ -16,6 +16,7 @@ import * as licenses from './v1/licenses.js'
 import * as plans from './v1/plans.js'
 import * as videos from './v1/videos.js'
 import * as guides from './v1/guides.js'
+import * as playlists from './v1/playlists.js'
 
 export let istrav = {
   event: {
