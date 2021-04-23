@@ -12,6 +12,7 @@ import * as categories from './v1/categories.js'
 import * as products from './v1/products.js'
 import * as menus from './v1/menus.js'
 import * as pages from './v1/pages.js'
+import * as faq from './v1/faq.js'
 import * as licenses from './v1/licenses.js'
 import * as plans from './v1/plans.js'
 import * as videos from './v1/videos.js'
@@ -30,7 +31,8 @@ export let istrav = {
   },
   app: {
     menus,
-    pages
+    pages,
+    faq
   },
   account: {
     users,
