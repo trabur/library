@@ -1,7 +1,7 @@
 import { version } from './version.js'
 import axios from 'axios'
 
-let host = 'http://localhost:3000'
+let host = 'http://localhost:1337'
 let endpoint = 'blocks'
 let token = ''
 
