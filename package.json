@@ -10,7 +10,6 @@
     "url": "git@github.com:trabur/istrav-library.git"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "istrav": "^0.1.1"
+    "axios": "^0.21.1"
   }
 }
