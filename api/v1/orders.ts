@@ -1,8 +1,8 @@
-import { version } from './version.js'
+import { version } from './version'
 import axios from 'axios'
 
 let host = 'http://localhost:1337'
-let component = 'apps'
+let endpoint = 'orders'
 let token = ''
 
 export function init (config) {
@@ -11,7 +11,7 @@ export function init (config) {
 }
 
 export function save (eventSource) {
-  let url = `${host}/${version}/${component}/save`
+  let url = `${host}/${version}/${endpoint}/save`
   eventSource.url = url
   return axios
     .post(url, {
@@ -29,7 +29,7 @@ export function save (eventSource) {
 }
 
 export function all (eventSource) {
-  let url = `${host}/${version}/${component}/all`
+  let url = `${host}/${version}/${endpoint}/all`
   eventSource.url = url
   return axios
     .post(url, {
@@ -48,7 +48,7 @@ export function all (eventSource) {
 }
 
 export function get (eventSource) {
-  let url = `${host}/${version}/${component}/get`
+  let url = `${host}/${version}/${endpoint}/get`
   eventSource.url = url
   return axios
     .post(url, {
@@ -66,7 +66,7 @@ export function get (eventSource) {
 }
 
 export function update (eventSource) {
-  let url = `${host}/${version}/${component}/update`
+  let url = `${host}/${version}/${endpoint}/update`
   eventSource.url = url
   return axios
     .post(url, {
@@ -84,43 +84,7 @@ export function update (eventSource) {
 }
 
 export function remove (eventSource) {
-  let url = `${host}/${version}/${component}/remove`
-  eventSource.url = url
-  return axios
-    .post(url, {
-      params: eventSource
-    })
-    .then(function (response) {
-      response.data.clientAt = Date.now()
-      // console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
-      return response.data
-    })
-    .catch(function (error) {
-      // console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
-      return error
-    })
-}
-
-export function endpoint (eventSource) {
-  let url = `${host}/${version}/${component}/endpoint`
-  eventSource.url = url
-  return axios
-    .post(url, {
-      params: eventSource
-    })
-    .then(function (response) {
-      response.data.clientAt = Date.now()
-      // console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
-      return response.data
-    })
-    .catch(function (error) {
-      // console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
-      return error
-    })
-}
-
-export function totals (eventSource) {
-  let url = `${host}/${version}/${component}/totals`
+  let url = `${host}/${version}/${endpoint}/remove`
   eventSource.url = url
   return axios
     .post(url, {

@@ -1,8 +1,8 @@
-import { version } from './version.js'
+import { version } from './version'
 import axios from 'axios'
 
 let host = 'http://localhost:1337'
-let endpoint = 'pages'
+let endpoint = 'carts'
 let token = ''
 
 export function init (config) {
@@ -101,8 +101,8 @@ export function remove (eventSource) {
     })
 }
 
-export function blocks (eventSource) {
-  let url = `${host}/${version}/${endpoint}/blocks`
+export function stripeCheckoutSession (eventSource) {
+  let url = `${host}/${version}/${endpoint}/stripeCheckoutSession`
   eventSource.url = url
   return axios
     .post(url, {

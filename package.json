@@ -1,8 +1,8 @@
 {
   "name": "istrav",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "",
-  "main": "./api/index.js",
+  "main": "./api/index.ts",
   "homepage": "https://istrav.com",
   "type": "module",
   "repository": {

@@ -1,8 +1,8 @@
-import { version } from './version.js'
+import { version } from './version'
 import axios from 'axios'
 
 let host = 'http://localhost:1337'
-let endpoint = 'videos'
+let endpoint = 'vehicles'
 let token = ''
 
 export function init (config) {
@@ -48,7 +48,7 @@ export function all (eventSource) {
 }
 
 export function get (eventSource) {
-  let url = `${host}/${version}/${endpoint}/get`
+  let url = `${host}/${version}/${endpoint}/get/${eventSource.arguements.id}`
   eventSource.url = url
   return axios
     .post(url, {
@@ -66,7 +66,7 @@ export function get (eventSource) {
 }
 
 export function update (eventSource) {
-  let url = `${host}/${version}/${endpoint}/update`
+  let url = `${host}/${version}/${endpoint}/update/${eventSource.arguements.id}`
   eventSource.url = url
   return axios
     .post(url, {
@@ -84,7 +84,7 @@ export function update (eventSource) {
 }
 
 export function remove (eventSource) {
-  let url = `${host}/${version}/${endpoint}/remove`
+  let url = `${host}/${version}/${endpoint}/remove/${eventSource.arguements.id}`
   eventSource.url = url
   return axios
     .post(url, {

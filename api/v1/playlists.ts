@@ -1,8 +1,8 @@
-import { version } from './version.js'
+import { version } from './version'
 import axios from 'axios'
 
 let host = 'http://localhost:1337'
-let endpoint = 'licenses'
+let endpoint = 'playlists'
 let token = ''
 
 export function init (config) {
@@ -101,3 +101,20 @@ export function remove (eventSource) {
     })
 }
 
+export function guides (eventSource) {
+  let url = `${host}/${version}/${endpoint}/guides`
+  eventSource.url = url
+  return axios
+    .post(url, {
+      params: eventSource
+    })
+    .then(function (response) {
+      response.data.clientAt = Date.now()
+      // console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
+      return response.data
+    })
+    .catch(function (error) {
+      // console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
+      return error
+    })
+}

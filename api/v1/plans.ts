@@ -1,8 +1,8 @@
-import { version } from './version.js'
+import { version } from './version'
 import axios from 'axios'
 
 let host = 'http://localhost:1337'
-let endpoint = 'orders'
+let endpoint = 'plans'
 let token = ''
 
 export function init (config) {

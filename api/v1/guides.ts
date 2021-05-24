@@ -1,8 +1,8 @@
-import { version } from './version.js'
+import { version } from './version'
 import axios from 'axios'
 
 let host = 'http://localhost:1337'
-let endpoint = 'playlists'
+let endpoint = 'guides'
 let token = ''
 
 export function init (config) {
@@ -101,8 +101,8 @@ export function remove (eventSource) {
     })
 }
 
-export function guides (eventSource) {
-  let url = `${host}/${version}/${endpoint}/guides`
+export function videos (eventSource) {
+  let url = `${host}/${version}/${endpoint}/videos`
   eventSource.url = url
   return axios
     .post(url, {
